@@ -56,4 +56,25 @@ class APIManager{
             }
         }
     }
+    func fetchCompanyDetails(symbol:String) async throws -> [CompanyDetails]{
+        return try await withUnsafeThrowingContinuation { continuation in
+            let request = URLRequest(url: URL(string:"https://finnhub.io/api/v1/stock/profile2?symbol="+String(symbol)+"&token=ch2pehpr01qs9g9uur50ch2pehpr01qs9g9uur5g")!)
+            AF.request(request).responseData { response in
+                do{
+                    switch response.result {
+                    case .success( _):
+                                                    var items:[CompanyDetails] = []
+                                                    let json = try JSON(data: response.data!)
+                        items.append(CompanyDetails(id: UUID(), country: json["country"].stringValue, currency: json["currency"].stringValue, exchange: json["exchange"].stringValue, ipo: json["ipo"].stringValue, marketCapitalization: json["marketCapitalization"].stringValue, name: json["name"].stringValue, phone: json["phone"].stringValue, shareOutstanding: json["shareOutstanding"].stringValue, ticket:json["ticket"].stringValue , webUrl: json["webUrl"].stringValue, logo: json["logo"].stringValue, finnhubIndustry: json["finnhubIndustry"].stringValue))
+                                                    continuation.resume(returning: items)
+                    case .failure( _):
+                                                    debugPrint("something went wrong!!!")
+                    }
+                }
+                catch{
+                    debugPrint("something went wrong!!!!!")
+                }
+            }
+        }
+    }
 }

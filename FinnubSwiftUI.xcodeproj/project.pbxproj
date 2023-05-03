@@ -21,6 +21,8 @@
 		D6C462282A02610D009F22AB /* PriceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C462272A02610D009F22AB /* PriceTarget.swift */; };
 		D6C4622A2A0279D5009F22AB /* Finnhub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C462292A0279D5009F22AB /* Finnhub.swift */; };
 		D6C4622D2A0281F5009F22AB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4622C2A0281F5009F22AB /* ViewModel.swift */; };
+		D6C462302A028BC5009F22AB /* CompanyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4622F2A028BC5009F22AB /* CompanyDetails.swift */; };
+		D6C462322A028F01009F22AB /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C462312A028F01009F22AB /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		D6C462272A02610D009F22AB /* PriceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTarget.swift; sourceTree = "<group>"; };
 		D6C462292A0279D5009F22AB /* Finnhub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finnhub.swift; sourceTree = "<group>"; };
 		D6C4622C2A0281F5009F22AB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D6C4622F2A028BC5009F22AB /* CompanyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetails.swift; sourceTree = "<group>"; };
+		D6C462312A028F01009F22AB /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 				D6C4621C2A024F6E009F22AB /* Symbols.swift */,
 				D6C462272A02610D009F22AB /* PriceTarget.swift */,
 				D6C462292A0279D5009F22AB /* Finnhub.swift */,
+				D6C4622F2A028BC5009F22AB /* CompanyDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C461F32A024F3B009F22AB /* ContentView.swift */,
+				D6C462312A028F01009F22AB /* DetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,8 +324,10 @@
 			files = (
 				D6C4622A2A0279D5009F22AB /* Finnhub.swift in Sources */,
 				D6C462202A024FCC009F22AB /* APIManager.swift in Sources */,
+				D6C462322A028F01009F22AB /* DetailsView.swift in Sources */,
 				D6C462282A02610D009F22AB /* PriceTarget.swift in Sources */,
 				D6C4621D2A024F6E009F22AB /* Symbols.swift in Sources */,
+				D6C462302A028BC5009F22AB /* CompanyDetails.swift in Sources */,
 				D6C461F42A024F3B009F22AB /* ContentView.swift in Sources */,
 				D6C461F22A024F3B009F22AB /* FinnubSwiftUIApp.swift in Sources */,
 				D6C4622D2A0281F5009F22AB /* ViewModel.swift in Sources */,

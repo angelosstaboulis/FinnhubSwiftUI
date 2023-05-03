@@ -9,27 +9,32 @@ import SwiftUI
 import Alamofire
 import SwiftyJSON
 struct ContentView: View {
-    @State var viewModel = ViewModel()
+    @StateObject var viewModel = ViewModel()
     @State var listPrices:[Finnhub]=[]
+    @State var details = Finnhub()
     var body: some View {
-        VStack{
-            Text("FinnHub")
+        NavigationView{
+            List(listPrices,id:\.id){ record in
+                NavigationLink {
+                    DetailsView(recordDetails: $details).onAppear{
+                        details = record
+                    }
+                } label: {
+                    HStack{
+                         Text(record.symbol)
+                         Text(record.price).foregroundColor(.green)
+                    }
+                }
+            }.navigationBarTitle("Finnhub", displayMode: .inline)
         }
-        List(listPrices,id:\.id){ record in
-            HStack{
-                Text(record.symbol).padding(20.0)
-                Text(record.price).foregroundColor(.green)
-
-            }.frame(width:600,height:50)
-           
-        }
-        .onAppear {
+        .onAppear{
             Task.init{
                 listPrices = try await viewModel.fetchListPrices()
-            }
-
         }
     }
+    
+    
+}
 }
 
 struct ContentView_Previews: PreviewProvider {
