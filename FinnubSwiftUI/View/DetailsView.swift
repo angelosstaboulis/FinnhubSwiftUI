@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-
 struct DetailsView: View {
     @StateObject var viewModelDetails = ViewModel()
     @Binding var recordDetails:Finnhub
     @State var detailsArray:[CompanyDetails]=[]
     @State var details = CompanyDetails()
-
+    @State var imageURL:URL!
     var body: some View {
         VStack{
             HStack{
@@ -51,7 +50,9 @@ struct DetailsView: View {
             HStack{
                 Text("Logo").foregroundColor(.red)
                 Text(details.logo ?? "")
+               
             }.frame(width: 390,height:70,alignment: .leading)
+               
             HStack{
                 Text("WebUrl").foregroundColor(.red)
                 Text(details.webUrl ?? "")
@@ -60,7 +61,9 @@ struct DetailsView: View {
                 Text("Ticket").foregroundColor(.red)
                 Text(details.ticket ?? "")
             }.frame(width: 390,height:70,alignment: .leading)
+            
         }
+     
     }
                
 }

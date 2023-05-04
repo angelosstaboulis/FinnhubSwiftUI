@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6086C742A03E94F00368A07 /* Finnhub-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6086C732A03E94F00368A07 /* Finnhub-Info.plist */; };
+		D6086C772A03E97000368A07 /* FinnhubSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D6086C762A03E97000368A07 /* FinnhubSwift */; };
+		D6A899502A0438F5009811CB /* WebSocketConnectionStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A8994F2A0438F5009811CB /* WebSocketConnectionStart.swift */; };
+		D6A899522A043A9F009811CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A899512A043A9F009811CB /* Constants.swift */; };
+		D6BFFFA92A03F6EF004C3284 /* WebSocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFFFA82A03F6EF004C3284 /* WebSocketConnection.swift */; };
+		D6BFFFAC2A03F701004C3284 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = D6BFFFAB2A03F701004C3284 /* Starscream */; };
 		D6C461F22A024F3B009F22AB /* FinnubSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C461F12A024F3B009F22AB /* FinnubSwiftUIApp.swift */; };
 		D6C461F42A024F3B009F22AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C461F32A024F3B009F22AB /* ContentView.swift */; };
 		D6C461F62A024F3D009F22AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C461F52A024F3D009F22AB /* Assets.xcassets */; };
@@ -43,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6086C732A03E94F00368A07 /* Finnhub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Finnhub-Info.plist"; sourceTree = "<group>"; };
+		D6A8994F2A0438F5009811CB /* WebSocketConnectionStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketConnectionStart.swift; sourceTree = "<group>"; };
+		D6A899512A043A9F009811CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D6BFFFA82A03F6EF004C3284 /* WebSocketConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketConnection.swift; sourceTree = "<group>"; };
 		D6C461EE2A024F3B009F22AB /* FinnubSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinnubSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C461F12A024F3B009F22AB /* FinnubSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnubSwiftUIApp.swift; sourceTree = "<group>"; };
 		D6C461F32A024F3B009F22AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,8 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6086C772A03E97000368A07 /* FinnhubSwift in Frameworks */,
 				D6C462262A025057009F22AB /* SwiftyJSON in Frameworks */,
 				D6C462232A025041009F22AB /* Alamofire in Frameworks */,
+				D6BFFFAC2A03F701004C3284 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +131,7 @@
 				D6C461F12A024F3B009F22AB /* FinnubSwiftUIApp.swift */,
 				D6C461F52A024F3D009F22AB /* Assets.xcassets */,
 				D6C461F72A024F3D009F22AB /* Preview Content */,
+				D6086C732A03E94F00368A07 /* Finnhub-Info.plist */,
 			);
 			path = FinnubSwiftUI;
 			sourceTree = "<group>";
@@ -162,7 +175,10 @@
 		D6C4621E2A024F9F009F22AB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D6BFFFA82A03F6EF004C3284 /* WebSocketConnection.swift */,
+				D6A8994F2A0438F5009811CB /* WebSocketConnectionStart.swift */,
 				D6C4621F2A024FCC009F22AB /* APIManager.swift */,
+				D6A899512A043A9F009811CB /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -203,6 +219,8 @@
 			packageProductDependencies = (
 				D6C462222A025041009F22AB /* Alamofire */,
 				D6C462252A025057009F22AB /* SwiftyJSON */,
+				D6086C762A03E97000368A07 /* FinnhubSwift */,
+				D6BFFFAB2A03F701004C3284 /* Starscream */,
 			);
 			productName = FinnubSwiftUI;
 			productReference = D6C461EE2A024F3B009F22AB /* FinnubSwiftUI.app */;
@@ -279,6 +297,8 @@
 			packageReferences = (
 				D6C462212A025041009F22AB /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D6C462242A025057009F22AB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D6086C752A03E97000368A07 /* XCRemoteSwiftPackageReference "FinnhubSwift" */,
+				D6BFFFAA2A03F701004C3284 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = D6C461EF2A024F3B009F22AB /* Products */;
 			projectDirPath = "";
@@ -298,6 +318,7 @@
 			files = (
 				D6C461F92A024F3D009F22AB /* Preview Assets.xcassets in Resources */,
 				D6C461F62A024F3D009F22AB /* Assets.xcassets in Resources */,
+				D6086C742A03E94F00368A07 /* Finnhub-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +344,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C4622A2A0279D5009F22AB /* Finnhub.swift in Sources */,
+				D6BFFFA92A03F6EF004C3284 /* WebSocketConnection.swift in Sources */,
 				D6C462202A024FCC009F22AB /* APIManager.swift in Sources */,
+				D6A899502A0438F5009811CB /* WebSocketConnectionStart.swift in Sources */,
 				D6C462322A028F01009F22AB /* DetailsView.swift in Sources */,
 				D6C462282A02610D009F22AB /* PriceTarget.swift in Sources */,
 				D6C4621D2A024F6E009F22AB /* Symbols.swift in Sources */,
@@ -331,6 +354,7 @@
 				D6C461F42A024F3B009F22AB /* ContentView.swift in Sources */,
 				D6C461F22A024F3B009F22AB /* FinnubSwiftUIApp.swift in Sources */,
 				D6C4622D2A0281F5009F22AB /* ViewModel.swift in Sources */,
+				D6A899522A043A9F009811CB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +675,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D6086C752A03E97000368A07 /* XCRemoteSwiftPackageReference "FinnhubSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kurtmcintire/FinnhubSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		D6BFFFAA2A03F701004C3284 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		D6C462212A025041009F22AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -670,6 +710,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D6086C762A03E97000368A07 /* FinnhubSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6086C752A03E97000368A07 /* XCRemoteSwiftPackageReference "FinnhubSwift" */;
+			productName = FinnhubSwift;
+		};
+		D6BFFFAB2A03F701004C3284 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6BFFFAA2A03F701004C3284 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
 		D6C462222A025041009F22AB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D6C462212A025041009F22AB /* XCRemoteSwiftPackageReference "Alamofire" */;
