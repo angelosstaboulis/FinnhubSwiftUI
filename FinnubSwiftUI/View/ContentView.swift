@@ -15,6 +15,7 @@ struct ContentView: View {
     @State var listPrices:[Finnhub]=[]
     @State var listPricesSorted:[Finnhub]=[]
     @StateObject var socket = WebSocketConnection()
+    @StateObject var connection = WebSocketConnectionStart()
     @State var details = Finnhub()
     var body: some View {
         NavigationView{
@@ -48,7 +49,8 @@ struct ContentView: View {
             Task.init{
                 listPrices = try await viewModel.fetchListPrices()
             }
-   
+            connection.socketConnect()
+            
         }
     }
  }
