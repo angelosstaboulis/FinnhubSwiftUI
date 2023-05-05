@@ -49,7 +49,6 @@ struct ContentView: View {
             Task.init{
                 listPrices = try await viewModel.fetchListPrices()
             }
-            connection.socketConnect()
             
         }
     }
